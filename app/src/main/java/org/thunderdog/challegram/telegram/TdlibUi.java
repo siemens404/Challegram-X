@@ -45,6 +45,7 @@ import org.thunderdog.challegram.BaseActivity;
 import org.thunderdog.challegram.BuildConfig;
 import org.thunderdog.challegram.Log;
 import org.thunderdog.challegram.MainActivity;
+import org.thunderdog.challegram.ui.ChatFoldersController;
 import org.thunderdog.challegram.ui.MapControllerFactory;
 import org.thunderdog.challegram.R;
 import org.thunderdog.challegram.U;
@@ -3584,8 +3585,8 @@ public class TdlibUi extends Handler {
               return;
             }
             case TdApi.InternalLinkTypeFilterSettings.CONSTRUCTOR: {
-              // TODO show chat folders screen
-              ok = false;
+              ChatFoldersController chatFolders = new ChatFoldersController(context.context(), context.tdlib());
+              context.context().navigation().navigateTo(chatFolders);
               break;
             }
             case TdApi.InternalLinkTypePassportDataRequest.CONSTRUCTOR: {

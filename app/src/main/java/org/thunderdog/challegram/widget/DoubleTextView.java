@@ -53,6 +53,8 @@ import me.vkryl.core.lambda.Destroyable;
 public class DoubleTextView extends RelativeLayout implements RtlCheckListener, Destroyable {
   private final TextView titleView, subtitleView;
   private final ComplexReceiver receiver;
+  private final ImageReceiver imageReceiver;
+  private final GifReceiver gifReceiver;
   private @Nullable NonMaterialButton button;
 
   private boolean ignoreStartOffset;
