@@ -175,36 +175,36 @@ dependencies {
   implementation(project(":vkryl:android"))
   implementation(project(":vkryl:td"))
   // AndroidX: https://developer.android.com/jetpack/androidx/releases/
-  implementation("androidx.activity:activity:1.5.1")
+  implementation("androidx.activity:activity:1.6.1")
   implementation("androidx.palette:palette:1.0.0")
   implementation("androidx.recyclerview:recyclerview:1.2.1")
   implementation("androidx.viewpager:viewpager:1.0.0")
   implementation("androidx.work:work-runtime:2.7.1")
   implementation("androidx.browser:browser:1.4.0")
-  implementation("androidx.exifinterface:exifinterface:1.3.4")
+  implementation("androidx.exifinterface:exifinterface:1.3.5")
   implementation("androidx.collection:collection:1.2.0")
   implementation("androidx.interpolator:interpolator:1.0.0")
   implementation("androidx.gridlayout:gridlayout:1.0.0")
   // CameraX: https://developer.android.com/jetpack/androidx/releases/camera
-  implementation("androidx.camera:camera-camera2:1.1.0")
-  implementation("androidx.camera:camera-lifecycle:1.1.0")
-  implementation("androidx.camera:camera-view:1.1.0")
+  implementation("androidx.camera:camera-camera2:1.2.0")
+  implementation("androidx.camera:camera-lifecycle:1.2.0")
+  implementation("androidx.camera:camera-view:1.2.0")
   // Google Play Services: https://developers.google.com/android/guides/releases
-  implementation("com.google.android.gms:play-services-base:17.6.0")
-  implementation("com.google.android.gms:play-services-basement:17.6.0")
-  implementation("com.google.android.gms:play-services-maps:17.0.1")
-  implementation("com.google.android.gms:play-services-location:18.0.0")
-  implementation("com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1")
+  implementation("com.google.android.gms:play-services-base:18.1.0")
+  implementation("com.google.android.gms:play-services-basement:18.1.0")
+  implementation("com.google.android.gms:play-services-maps:18.1.0")
+  implementation("com.google.android.gms:play-services-location:21.0.1")
+  implementation("com.google.android.gms:play-services-mlkit-barcode-scanning:18.1.0")
   // Firebase: https://firebase.google.com/support/release-notes/android
-  implementation("com.google.firebase:firebase-messaging:22.0.0") {
+  implementation("com.google.firebase:firebase-messaging:23.1.1") {
     exclude(group = "com.google.firebase", module = "firebase-core")
     exclude(group = "com.google.firebase", module = "firebase-analytics")
     exclude(group = "com.google.firebase", module = "firebase-measurement-connector")
   }
   // Play In-App Updates: https://developer.android.com/reference/com/google/android/play/core/release-notes-in_app_updates
-  implementation("com.google.android.play:app-update:2.0.0")
+  implementation("com.google.android.play:app-update:2.0.1")
   // ExoPlayer: https://github.com/google/ExoPlayer/blob/release-v2/RELEASENOTES.md
-  implementation("com.google.android.exoplayer:exoplayer-core:2.18.1")
+  implementation("com.google.android.exoplayer:exoplayer-core:2.18.2")
   // The Checker Framework: https://checkerframework.org/CHANGELOG.md
   compileOnly("org.checkerframework:checker-qual:3.25.0")
   // OkHttp: https://github.com/square/okhttp/blob/master/CHANGELOG.md
@@ -228,9 +228,7 @@ dependencies {
 
   // TODO: upgrade to "com.googlecode.mp4parser:isoparser:1.1.22" or latest
   // mp4parser: https://github.com/sannies/mp4parser/releases
-  implementation("com.googlecode.mp4parser:isoparser:1.0.6")
+  implementation("com.googlecode.mp4parser:isoparser:1.1.22")
 }
 
-if (!isExperimentalBuild) {
-  apply(plugin = "com.google.gms.google-services")
-}
+apply(plugin = "com.google.gms.google-services")

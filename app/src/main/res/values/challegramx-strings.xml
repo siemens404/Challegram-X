@@ -1,0 +1,12 @@
+<!-- This is a Challegram X resource file. -->
+<!-- Challegram X is not a trademark of Telegram and Telegram X. -->
+<!-- Challegram X is an open and freely distributed modification of Telegram X. -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Challegram X main strings -->
+	<string name="ChallegramX">Challegram X</string>
+	<string name="ChallegramXVersion">Challegram X version</string>
+
+</resources>
