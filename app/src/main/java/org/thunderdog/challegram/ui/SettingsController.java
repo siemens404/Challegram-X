@@ -82,6 +82,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import me.deadlylxrd.challegramx.ui.MainSettings;
 import me.deadlylxrd.challegramx.utils.Utils;
 
 import me.vkryl.android.widget.FrameLayoutFix;
@@ -613,6 +614,10 @@ public class SettingsController extends ViewController<Void> implements
     items.add(new ListItem(ListItem.TYPE_INFO_MULTILINE, R.id.btn_bio, R.drawable.baseline_info_24, R.string.UserBio).setContentStrings(R.string.LoadingInformation, R.string.BioNone));
     items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
 
+    items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));
+    items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_ChallegramXSettings, R.drawable.baseline_settings_24, R.string.ChallegramXSettings));
+    items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
+
     TdApi.SuggestedAction[] actions = tdlib.getSuggestedActions();
     int addedActionItems = 0;
     for (TdApi.SuggestedAction action : actions) {
@@ -948,6 +953,10 @@ public class SettingsController extends ViewController<Void> implements
         EditBioController c = new EditBioController(context, tdlib);
         c.setArguments(new EditBioController.Arguments(about != null ? about.text : "", 0));
         navigateTo(c);
+        break;
+      }
+      case R.id.btn_ChallegramXSettings: {
+        navigateTo(new MainSettings(context, tdlib));
         break;
       }
       case R.id.btn_languageSettings: {

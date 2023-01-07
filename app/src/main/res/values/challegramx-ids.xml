@@ -11,4 +11,22 @@
 	<!-- Challegram X btn ids -->
 	<item type="id" name="btn_chgxBuild" />
 
+	<!-- Challegram X Main Settings Ids -->
+	<item type="id" name="btn_generalSettings" />
+	<item type="id" name="btn_appearanceSettings" />
+	<item type="id" name="btn_chatsSettings" />
+	<item type="id" name="btn_otherSettings" />
+
+	<item type="id" name="btn_telegramChannel" />
+	<item type="id" name="btn_telegramChat" />
+
+	<item type="id" name="btn_developer" />
+	<item type="id" name="btn_donate" />
+
+	<!-- Challegram X Controller Ids -->
+	<item type="id" name="GeneralSettings" />
+	<item type="id" name="AppearanceSettings" />
+	<item type="id" name="ChatsSettings" />
+	<item type="id" name="OtherSettings" />
+
 </resources>

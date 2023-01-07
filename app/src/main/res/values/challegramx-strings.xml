@@ -9,4 +9,28 @@
 	<string name="ChallegramX">Challegram X</string>
 	<string name="ChallegramXVersion">Challegram X version</string>
 
+	<!-- Challegram X Main Settings Strings -->
+	<string name="ChallegramXSettings">Challegram X settings</string>
+
+	<string name="GeneralSettings">General</string>
+	<string name="AppearanceSettings">Appearance</string>
+	<string name="ChatsSettings">Chats</string>
+	<string name="OtherSettings">Other</string>
+
+	<string name="ChallegramXLinks">Links</string>
+
+	<string name="TelegramChannel">Telegram channel</string>
+	<string name="TelegramChannelDesc">Stay up to date with the latest Challegram X development news</string>
+	<string name="TelegramChat">Telegram chat</string>
+	<string name="TelegramChatDesc">Discuss Challegram X with other users</string>
+
+	<string name="ChallegramXInfo">Info</string>
+
+	<string name="Developer">Developer</string>
+	<string name="DeveloperDesc">Contact the Challegram X developer</string>
+	<string name="SourceCode">Source code</string>
+	<string name="SourceCodeDesc">View the source code of Challegram X</string>
+	<string name="Donate">Donate</string>
+	<string name="DonateDesc">Support further development of Challegram X</string>
+
 </resources>
