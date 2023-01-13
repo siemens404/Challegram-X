@@ -236,8 +236,16 @@ public class SettingView extends FrameLayoutFix implements FactorAnimator.Target
     return complexReceiver;
   }
 
-  public @Px float getMeasuredPaddingStart () {
+  public @Px float getMeasuredNameTop () {
+    return pTop;
+  }
+
+  public @Px float getMeasuredNameStart () {
     return pLeft;
+  }
+
+  public @Px int getMeasuredNameWidth () {
+    return displayItemNameWidth;
   }
 
   public void setTextColorId (@ThemeColorId int textColorId) {
@@ -686,7 +694,15 @@ public class SettingView extends FrameLayoutFix implements FactorAnimator.Target
     isEnabled.setValue(enabled, animated);
   }
 
-  private static void drawText (Canvas c, CharSequence text, Layout layout, float x, float y, int textY, Paint paint, boolean rtl, int viewWidth, float textWidth, Text wrap, TextColorSet textColorSet) {
+  public boolean isVisuallyEnabled () {
+    return isEnabled.getValue();
+  }
+
+  public float getVisuallyEnabledFactor () {
+    return isEnabled.getFloatValue();
+  } 
+
+  private static void drawText (Canvas c, CharSequence text, Layout layout, float x, float y, Paint paint, boolean rtl, int viewWidth, float textWidth) {
     if (wrap != null) {
       wrap.draw(c, (int) x, (int) (viewWidth - x), 0, textY, textColorSet != null ? textColorSet : TextColorSets.Regular.NEGATIVE);
     } else if (layout != null) {
