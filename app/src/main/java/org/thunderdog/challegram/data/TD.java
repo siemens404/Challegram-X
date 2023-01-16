@@ -7164,7 +7164,7 @@ public class TD {
       case "All":
         return R.drawable.baseline_forum_24;
       case "Unmuted":
-        return R.drawable.baseline_notifications_active_24;
+        return R.drawable.baseline_notifications_24;
       case "Bots":
         return R.drawable.deproko_baseline_bots_24;
       case "Channels":
@@ -7174,7 +7174,7 @@ public class TD {
       case "Private":
         return R.drawable.baseline_person_24;
       case "Setup":
-        return R.drawable.baseline_settings_24;
+        return R.drawable.baseline_assignment_24;
       case "Cat":
         return R.drawable.templarian_baseline_cat_24;
       case "Crown":
@@ -7200,7 +7200,8 @@ public class TD {
       case "Work":
         return R.drawable.baseline_work_24;
       case "Airplane":
-        return R.drawable.baseline_flight_24;
+        // return R.drawable.baseline_flight_24;
+        return R.drawable.baseline_logo_telegram_24;
       case "Book":
         return R.drawable.baseline_book_24;
       case "Light":
@@ -7212,11 +7213,13 @@ public class TD {
       case "Note":
         return R.drawable.baseline_music_note_24;
       case "Palette":
-        return R.drawable.baseline_palette_24;
+        // return R.drawable.baseline_palette_24;
+        return R.drawable.baseline_brush_24;
       case "Unread":
         return R.drawable.baseline_mark_chat_unread_24;
       case "Travel":
-        return R.drawable.baseline_explore_24;
+        // return R.drawable.baseline_explore_24;
+        return R.drawable.baseline_flight_24;
       case "Custom":
         return R.drawable.baseline_folder_24;
       case "Trade":
