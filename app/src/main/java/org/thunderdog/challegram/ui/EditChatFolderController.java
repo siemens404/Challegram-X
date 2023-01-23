@@ -524,12 +524,10 @@ public class EditChatFolderController extends RecyclerViewController<EditChatFol
         chatView.setChat((TGFoundChat) item.getData());
         chatView.setAllowMaximizePreview(false);
       } else {
-        float avatarRadius = ChatView.getAvatarSizeDp(Settings.CHAT_MODE_2LINE) / 2f;
-        AvatarPlaceholder avatarPlaceholder = new AvatarPlaceholder(avatarRadius, new AvatarPlaceholder.Metadata(item.getIntValue(), item.getIconResource()), chatView);
         chatView.setTitle(item.getString());
         chatView.setSubtitle(null);
         chatView.setNoSubtitle(true);
-        chatView.setAvatar((ImageFile) null, avatarPlaceholder);
+        chatView.setAvatar(null, new AvatarPlaceholder.Metadata(item.getIntValue(), item.getIconResource()));
         chatView.clearPreviewChat();
       }
     }
