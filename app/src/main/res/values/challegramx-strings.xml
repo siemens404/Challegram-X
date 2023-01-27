@@ -34,6 +34,8 @@
 	<string name="DonateDesc">Support further development of Challegram X</string>
 
 	<!-- Challegram X General Settings Strings -->
+	<string name="HidePhone">Hide Phone</string>
+	<string name="PhoneHidden">Phone hidden</string>
 	<string name="ChatId">Chat ID</string>
 	<string name="ShowChatId">Show Chat ID</string>
 

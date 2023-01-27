@@ -42,6 +42,10 @@ public class GeneralSettings extends RecyclerViewController<Void> implements Vie
 	@Override public void onClick(View v) {
 		int id = v.getId();
 		switch(id) {
+			case R.id.btn_hidePhone:
+				ChallegramXSettings.instance().toggleHidePhone();
+				adapter.updateValuedSettingById(R.id.btn_hidePhone);
+				break;
 			case R.id.btn_showChatId:
 				ChallegramXSettings.instance().toggleShowChatId();
 				adapter.updateValuedSettingById(R.id.btn_showChatId);
@@ -62,6 +66,9 @@ public class GeneralSettings extends RecyclerViewController<Void> implements Vie
   			@Override protected void setValuedSetting(ListItem item, SettingView view, boolean isUpdate) {
   				view.setDrawModifier(item.getDrawModifier());
   				switch(item.getId()) {
+  					case R.id.btn_hidePhone:
+  						view.getToggler().setRadioEnabled(ChallegramXSettings.instance().isPhoneHidden(), isUpdate);
+  						break;
   					case R.id.btn_showChatId:
   						view.getToggler().setRadioEnabled(ChallegramXSettings.instance().isChatIdShows(), isUpdate);
   						break;
@@ -76,6 +83,8 @@ public class GeneralSettings extends RecyclerViewController<Void> implements Vie
     	items.add(new ListItem(ListItem.TYPE_HEADER, 0, 0, R.string.GeneralSettings));
 
     	items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));
+    	items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_hidePhone, 0, R.string.HidePhone));
+    	items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
     	items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_showChatId, 0, R.string.ShowChatId));
     	items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
 

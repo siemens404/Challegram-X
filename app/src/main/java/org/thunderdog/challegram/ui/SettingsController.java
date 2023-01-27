@@ -83,6 +83,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import me.deadlylxrd.challegramx.ChallegramXSettings;
 import me.deadlylxrd.challegramx.ui.MainSettings;
 import me.deadlylxrd.challegramx.utils.Utils;
 
@@ -894,8 +895,8 @@ public class SettingsController extends ViewController<Void> implements
     String displayPhoneNumber;
     if (user != null) {
       displayPhoneNumber = originalPhoneNumber = Strings.formatPhone(user.phoneNumber);
-      if (Settings.instance().needHidePhoneNumber()) {
-        displayPhoneNumber = Strings.replaceNumbers(displayPhoneNumber);
+      if (ChallegramXSettings.instance().isPhoneHidden()) {
+        displayPhoneNumber = Lang.getString(R.string.PhoneHidden);
       }
     } else {
       displayPhoneNumber = Lang.getString(R.string.LoadingPhone);

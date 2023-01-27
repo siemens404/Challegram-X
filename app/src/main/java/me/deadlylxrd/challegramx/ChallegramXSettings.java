@@ -31,6 +31,7 @@ public class ChallegramXSettings {
 	private static final String KEY_VERSION = "version";
 
 	// Challegram X General Settings
+	public static final string HIDE_PHONE = "hide_phone";
 	public static final string SHOW_CHAT_ID = "show_chatid";
 
 	// Challegram X Appearance Settings
@@ -170,6 +171,14 @@ public class ChallegramXSettings {
   	}
 
   	// General
+  	public boolean isPhoneHidden() {
+  		return getBoolean(HIDE_PHONE, false);
+  	}
+
+  	public void toggleHidePhone() {
+  		putBoolean(HIDE_PHONE, !isPhoneHidden());
+  	}
+  	
   	public boolean isChatIdShows() {
   		return getBoolean(SHOW_CHAT_ID, false);
   	}

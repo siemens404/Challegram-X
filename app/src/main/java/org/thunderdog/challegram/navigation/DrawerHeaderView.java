@@ -49,6 +49,8 @@ import org.thunderdog.challegram.util.text.Text;
 import org.thunderdog.challegram.util.text.TextColorSet;
 import org.thunderdog.challegram.widget.ExpanderView;
 
+import me.deadlylxrd.challegramx.ChallegramXSettings;
+
 import me.vkryl.android.AnimatorUtils;
 import me.vkryl.android.ScrimUtil;
 import me.vkryl.android.ViewUtils;
@@ -243,8 +245,8 @@ public class DrawerHeaderView extends View implements Destroyable, GlobalAccount
       userId = account.getKnownUserId();
       if (account.hasUserInfo()) {
         name = account.getName();
-        if (Settings.instance().needHidePhoneNumber()) {
-          phone = Strings.replaceNumbers(Strings.formatPhone(account.getPhoneNumber()));
+        if (ChallegramXSettings.instance().isPhoneHidden()) {
+          phone = Lang.getString(R.string.PhoneHidden);
         } else {
           phone = Strings.formatPhone(account.getPhoneNumber());
         }
