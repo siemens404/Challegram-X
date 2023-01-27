@@ -11,6 +11,7 @@
 
 	<!-- Challegram X Main Settings Strings -->
 	<string name="ChallegramXSettings">Challegram X settings</string>
+        <string name="ChallegramXSettingsDesc">Extensive set of additional settings</string>
 
 	<string name="GeneralSettings">General</string>
 	<string name="AppearanceSettings">Appearance</string>

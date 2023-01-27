@@ -600,6 +600,10 @@ public class SettingsController extends ViewController<Void> implements
             view.setText(obtainWrapper(text, ID_BIO));
             break;
           }
+          case R.id.btn_ChallegramXSettings: {
+            view.setData(R.string.ChallegramXSettingsDesc);
+            break;
+          }
         }
       }
     };
