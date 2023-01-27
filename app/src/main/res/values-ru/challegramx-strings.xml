@@ -1,0 +1,54 @@
+<!-- This is a Challegram X resource file. -->
+<!-- Challegram X is not a trademark of Telegram and Telegram X. -->
+<!-- Challegram X is an open and freely distributed modification of Telegram X. -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Challegram X Main Strings -->
+	<string name="ChallegramX">Challegram X</string>
+	<string name="ChallegramXVersion">Версия Challegram X</string>
+
+	<!-- Challegram X Main Settings Strings -->
+	<string name="ChallegramXSettings">Настройки Challegram X</string>
+	<string name="ChallegramXSettingsDesc">Обширный набор модификаций</string>
+
+	<string name="GeneralSettings">Общие</string>
+	<string name="AppearanceSettings">Внешний вид</string>
+	<string name="ChatsSettings">Чаты</string>
+	<string name="OtherSettings">Другое</string>
+
+	<string name="ChallegramXLinks">Ссылки</string>
+
+	<string name="TelegramChannel">Канал Telegram</string>
+	<string name="TelegramChannelDesc">Получай свежие новости и обновления в нашем официальном канале!</string>
+	<string name="TelegramChat">Чат в Telegram</string>
+	<string name="TelegramChatDesc">Обсуждай Challegram X с остальными пользователями!</string>
+
+	<string name="ChallegramXInfo">Информация</string>
+
+	<string name="Developer">Разработчик</string>
+	<string name="DeveloperDesc">Написать разработчику Challegram X</string>
+	<string name="SourceCode">Исходный код</string>
+	<string name="SourceCodeDesc">Посмотреть исходный код Challegram X</string>
+	<string name="Donate">Финансовая поддержка</string>
+	<string name="DonateDesc">Закинуть копеечку на развитие Challegram X</string>
+
+	<string name="Reboot">Перезапуск</string>
+	<string name="RebootDesc">Полный перезапуск приложения для применения некоторых настроек</string>
+
+	<!-- Challegram X General Settings Strings -->
+	<string name="HidePhone">Скрыть номер телефона</string>
+	<string name="PhoneHidden">Ты в безопасности, друг!</string>
+	<string name="ChatId">ID чата</string>
+	<string name="ShowChatId">Показывать ID чата</string>
+
+	<!-- Challegram X Appearance Settings Strings -->
+	<string name="DrawerSettings">Настройки бокового меню</string>
+	<string name="DrawerSettingsDesc">Здесь ты можешь настроить экран с элементами бокового меню</string>
+
+	<!-- Challegram X Chats Settings Strings -->
+	<string name="DisableCameraButton">Отключить кнопку камеры</string>
+	<string name="DisableRecordButton">Отключить кнопку записи</string>
+
+</resources>
