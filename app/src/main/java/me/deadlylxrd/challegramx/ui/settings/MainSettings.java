@@ -27,6 +27,7 @@ import java.util.ArrayList;
 
 import me.deadlylxrd.challegramx.ChallegramXSettings;
 import me.deadlylxrd.challegramx.configs.Config;
+import me.deadlylxrd.challegram.utils.system.LifecycleUtils;
 
 public class MainSettings extends RecyclerViewController<Void> implements View.OnClickListener, ViewController.SettingsIntDelegate {
 
@@ -80,6 +81,9 @@ public class MainSettings extends RecyclerViewController<Void> implements View.O
 				tdlib.ui().openUrl(this, Config.DONATE, new TdlibUi.UrlOpenParameters().forceInstantView());
 				break;
 			}
+			case R.id.btn_reboot:
+				LifecycleUtils.restartAppWithTimer();
+				break;
 
 		}
 	}
@@ -111,7 +115,9 @@ public class MainSettings extends RecyclerViewController<Void> implements View.O
   					case R.id.btn_donate:
   						view.setData(R.string.DonateDesc);
   						break;
-
+  					case R.id.btn_reboot:
+  						view.setData(R.string.RebootDesc);
+  						break;
   				}
   			}
   		};
@@ -151,6 +157,11 @@ public class MainSettings extends RecyclerViewController<Void> implements View.O
     	items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_sourceCode, R.drawable.baseline_github_24, R.string.SourceCode));
     	items.add(new ListItem(ListItem.TYPE_SEPARATOR));
     	items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_donate, R.drawable.baseline_paid_24, R.string.Donate));
+    	items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
+
+    	// Reboot this shit?
+    	items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));
+    	items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_reboot, R.drawable.baseline_restart_alt_24, R.string.Reboot));
     	items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
 
     	adapter.setItems(items, true);

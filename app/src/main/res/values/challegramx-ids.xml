@@ -21,6 +21,8 @@
 	<item type="id" name="btn_developer" />
 	<item type="id" name="btn_donate" />
 
+	<item type="id" name="btn_reboot" />
+
 	<!-- Challegram X General Settings Ids -->
 	<item type="id" name="btn_hidePhone" />
 	<item type="id" name="btn_chatId" />

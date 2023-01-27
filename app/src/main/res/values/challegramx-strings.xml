@@ -33,6 +33,9 @@
 	<string name="Donate">Donate</string>
 	<string name="DonateDesc">Support further development of Challegram X</string>
 
+	<string name="Reboot">Restart</string>
+	<string name="RebootDesc">Full restart of the application to apply some settings</string>
+
 	<!-- Challegram X General Settings Strings -->
 	<string name="HidePhone">Hide Phone</string>
 	<string name="PhoneHidden">Phone hidden</string>
