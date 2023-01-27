@@ -35,7 +35,11 @@ public class ChallegramXSettings {
 	public static final string SHOW_CHAT_ID = "show_chatid";
 
 	// Challegram X Appearance Settings
-	// -> Coming soon...
+	public static final string DRAWER_CONTACTS = "drawer_contacts";
+	public static final string DRAWER_FAVOURITE = "drawer_favourite";
+	public static final string DRAWER_INVITE_FRIENDS = "drawer_invite_friends";
+	public static final string DRAWER_HELP = "drawer_help";
+	public static final string DRAWER_NIGHTMODE = "drawer_nightmode";
 
 	// Challegram X Chats Settings
 	public static final string DISABLE_CAM_BTN = "disable_camera_button";
@@ -185,6 +189,47 @@ public class ChallegramXSettings {
 
   	public void toggleShowChatId() {
   		putBoolean(SHOW_CHAT_ID, !isChatIdShows());
+  	}
+
+  	// Appearance
+  	public boolean isDrawerContactsShows() {
+  		return getBoolean(DRAWER_CONTACTS, true);
+  	}
+
+  	public void toggleShowDrawerContacts() {
+  		putBoolean(DRAWER_CONTACTS, !isDrawerContactsShows());
+  	}
+
+  	public boolean isDrawerFavouriteShows() {
+  		return getBoolean(DRAWER_FAVOURITE, true);
+  	}
+
+  	public void toggleShowDrawerFavourite() {
+  		putBoolean(DRAWER_CONTACTS, !isDrawerFavouriteShows());
+  	}
+
+  	public boolean isDrawerInvitesShows() {
+  		return getBoolean(DRAWER_INVITE_FRIENDS, false);
+  	}
+
+  	public void toggleShowDrawerInvites() {
+  		putBoolean(DRAWER_INVITE_FRIENDS, !isDrawerInvitesShows());
+  	}
+
+  	public boolean isDrawerHelpShows() {
+  		return getBoolean(DRAWER_HELP, false);
+  	}
+
+  	public void toggleShowDrawerHelp() {
+  		putBoolean(DRAWER_HELP, !isDrawerHelpShows());
+  	}
+
+  	public boolean isDrawerNightmodeShows() {
+  		return getBoolean(DRAWER_NIGHTMODE, false);
+  	}
+
+  	public void toggleShowDrawerNightmode() {
+  		putBoolean(DRAWER_NIGHTMODE, !isDrawerNightmodeShows());
   	}
 
   	// Chats

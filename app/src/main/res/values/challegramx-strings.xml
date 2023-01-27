@@ -39,6 +39,10 @@
 	<string name="ChatId">Chat ID</string>
 	<string name="ShowChatId">Show Chat ID</string>
 
+	<!-- Challegram X Appearance Settings Strings -->
+	<string name="DrawerSettings">Drawer Settings</string>
+	<string name="DrawerSettingsDesc">In this section, you can customize the display of items in the drawer</string>
+
 	<!-- Challegram X Chats Settings Strings -->
 	<string name="DisableCameraButton">Disable Camera Button</string>
 	<string name="DisableRecordButton">Disable Record Button</string>
