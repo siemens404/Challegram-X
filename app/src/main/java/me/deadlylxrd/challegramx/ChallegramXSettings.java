@@ -31,7 +31,7 @@ public class ChallegramXSettings {
 	private static final String KEY_VERSION = "version";
 
 	// Challegram X General Settings
-	// -> Coming soon...
+	public static final string SHOW_CHAT_ID = "show_chatid";
 
 	// Challegram X Appearance Settings
 	// -> Coming soon...
@@ -166,6 +166,15 @@ public class ChallegramXSettings {
 
   	private void upgradeConfig (LevelDB config, SharedPreferences.Editor editor, int version) {
     	// DO NOTHING
+  	}
+
+  	// General
+  	public boolean isChatIdShows() {
+  		return getBoolean(SHOW_CHAT_ID, false);
+  	}
+
+  	public void toggleShowChatId() {
+  		putBoolean(SHOW_CHAT_ID, !isChatIdShows());
   	}
 
 }

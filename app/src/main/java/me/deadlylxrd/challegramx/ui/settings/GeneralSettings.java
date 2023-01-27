@@ -42,7 +42,10 @@ public class GeneralSettings extends RecyclerViewController<Void> implements Vie
 	@Override public void onClick(View v) {
 		int id = v.getId();
 		switch(id) {
-			// Coming soon...
+			case R.id.btn_showChatId:
+				ChallegramXSettings.instance().toggleShowChatId();
+				adapter.updateValuedSettingById(R.id.btn_showChatId);
+				break;
 		}
 	}
 
@@ -59,7 +62,9 @@ public class GeneralSettings extends RecyclerViewController<Void> implements Vie
   			@Override protected void setValuedSetting(ListItem item, SettingView view, boolean isUpdate) {
   				view.setDrawModifier(item.getDrawModifier());
   				switch(item.getId()) {
-  					// Coming soon...
+  					case R.id.btn_showChatId:
+  						view.getToggler().setRadioEnabled(ChallegramXSettings.instance().isChatIdShows(), isUpdate);
+  						break;
   				}
   			}
   		};
@@ -67,7 +72,12 @@ public class GeneralSettings extends RecyclerViewController<Void> implements Vie
   		// New ArrayList For Our RecyclerView
   		ArrayList<ListItem> items = new ArrayList<>();
 
-  		// Items will be added soon...
+  		items.add(new ListItem(ListItem.TYPE_EMPTY_OFFSET_SMALL));
+    	items.add(new ListItem(ListItem.TYPE_HEADER, 0, 0, R.string.GeneralSettings));
+
+    	items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));
+    	items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_showChatId, 0, R.string.ShowChatId));
+    	items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
 
   		adapter.setItems(items, true);
     	recyclerView.setAdapter(adapter);

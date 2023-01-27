@@ -23,6 +23,10 @@
 	<item type="id" name="btn_developer" />
 	<item type="id" name="btn_donate" />
 
+	<!-- Challegram X General Settings Ids -->
+	<item type="id" name="btn_chatId" />
+	<item type="id" name="btn_showChatId" />
+
 	<!-- Challegram X Controller Ids -->
 	<item type="id" name="GeneralSettings" />
 	<item type="id" name="AppearanceSettings" />

@@ -135,6 +135,8 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 
+import me.deadlylxrd.challegramx.ChallegramXSettings;
+
 import me.vkryl.android.AnimatorUtils;
 import me.vkryl.android.animator.FactorAnimator;
 import me.vkryl.android.text.CodePointCountFilter;
@@ -1728,6 +1730,18 @@ public class ProfileController extends ViewController<ProfileController.Args> im
           view.setAllowMultiLineName(item.getId() == R.id.btn_username);
         }
         switch (item.getId()) {
+          case R.id.btn_chatId: {
+            switch (mode) {
+              case MODE_USER:
+              case MODE_SECRET:
+              case MODE_CHANNEL:
+              case MODE_SUPERGROUP: {
+                view.setData("" + chat.id);
+                break;
+              }
+            }
+            break;
+          }
           case R.id.btn_useExplicitDice: {
             view.getToggler().setRadioEnabled(Settings.instance().getNewSetting(item.getLongId()), isUpdate);
             break;
@@ -2386,6 +2400,18 @@ public class ProfileController extends ViewController<ProfileController.Args> im
     return new ListItem(ListItem.TYPE_VALUED_SETTING, R.id.btn_notifications, R.drawable.baseline_notifications_24, R.string.Notifications);
   }
 
+  private ListItem newChatIdItem () {
+    switch (mode) {
+      case MODE_USER:
+      case MODE_SECRET:
+      case MODE_CHANNEL:
+      case MODE_SUPERGROUP: {
+        return new ListItem(ListItem.TYPE_INFO_SETTING, R.id.btn_chatId, R.drawable.baseline_info_24, R.string.ChatId, false);
+      }
+    }
+    return null;
+  }
+
   private ListItem newUsernameItem () {
     if (isEditing()) {
       return null;
@@ -2424,6 +2450,13 @@ public class ProfileController extends ViewController<ProfileController.Args> im
     items.add(new ListItem(ListItem.TYPE_EMPTY_OFFSET));
 
     int addedCount = 0;
+
+    final ListItem chatIdItem = newChatIdItem();
+    if (ChallegramXSettings.instance().isChatIdShows() && chatIdItem != null) {
+      items.add(chatIdItem);
+      addedCount++;
+    }
+
     if (Td.hasUsername(user)) {
       final ListItem usernameItem = newUsernameItem();
       if (usernameItem != null) {
@@ -2962,6 +2995,12 @@ public class ProfileController extends ViewController<ProfileController.Args> im
 
     int addedCount = 0;
 
+    final ListItem chatIdItem = newChatIdItem();
+    if (ChallegramXSettings.instance().isChatIdShows() && chatIdItem != null) {
+      items.add(chatIdItem);
+      addedCount++;
+    }
+
     if (isPublic) {
       ListItem usernameItem = newUsernameItem();
       if (usernameItem != null) {
@@ -3038,6 +3077,12 @@ public class ProfileController extends ViewController<ProfileController.Args> im
     items.add(new ListItem(ListItem.TYPE_EMPTY_OFFSET));
 
     int addedCount = 0;
+
+    final ListItem chatIdItem = newChatIdItem();
+    if (ChallegramXSettings.instance().isChatIdShows() && chatIdItem != null) {
+      items.add(chatIdItem);
+      addedCount++;
+    }
 
     if (isPublic) {
       ListItem usernameItem = newUsernameItem();
@@ -4576,6 +4621,21 @@ public class ProfileController extends ViewController<ProfileController.Args> im
         if (c != null) {
           ((SharedBaseController<?>) c).shareMessages();
         }
+        break;
+      }
+      case R.id.btn_chatId: {
+        IntList ids = new IntList(1);
+        StringList strings = new StringList(1);
+        IntList icons = new IntList(1);
+
+        ids.append(R.id.btn_copyText);
+        strings.append(R.string.Copy);
+        icons.append(R.drawable.baseline_content_copy_24);
+
+        showOptions("" + chat.id, ids.get(), strings.get(), null, icons.get(), (itemView, id) -> {
+          UI.copyText("" + chat.id, R.string.CopiedText);
+          return true;
+        });
         break;
       }
       case R.id.btn_phone: {
