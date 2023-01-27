@@ -37,7 +37,8 @@ public class ChallegramXSettings {
 	// -> Coming soon...
 
 	// Challegram X Chats Settings
-	// -> Coming soon...
+	public static final string DISABLE_CAM_BTN = "disable_camera_button";
+	public static final string DISABLE_REC_BTN = "disable_record_button";
 
 	// Challegram X Other Settings
 	// -> Coming soon...
@@ -175,6 +176,23 @@ public class ChallegramXSettings {
 
   	public void toggleShowChatId() {
   		putBoolean(SHOW_CHAT_ID, !isChatIdShows());
+  	}
+
+  	// Chats
+  	public boolean isCamBtnDisabled() {
+  		return getBoolean(DISABLE_CAM_BTN, false);
+  	}
+
+  	public void toggleDisableCamBtn() {
+  		putBoolean(DISABLE_CAM_BTN, !isCamBtnDisabled());
+  	}
+
+	public boolean isRecBtnDisabled() {
+  		return getBoolean(DISABLE_REC_BTN, false);
+  	}
+
+	public void toggleDisableRecBtn() {
+  		putBoolean(DISABLE_REC_BTN, !isRecBtnDisabled());
   	}
 
 }

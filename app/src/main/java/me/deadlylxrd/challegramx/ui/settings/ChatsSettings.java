@@ -42,7 +42,14 @@ public class ChatsSettings extends RecyclerViewController<Void> implements View.
 	@Override public void onClick(View v) {
 		int id = v.getId();
 		switch(id) {
-			// Coming soon...
+			case R.id.btn_disableCamBtn:
+				ChallegramXSettings.instance().toggleDisableCamBtn();
+				adapter.updateVauledSettingById(R.id.btn_disableCamBtn);
+				break;
+			case R.id.btn_disableRecBtn:
+				ChallegramXSettings.instance().toggleDisableRecBtn();
+				adapter.updateVauledSettingById(R.id.btn_disableRecBtn);
+				break;
 		}
 	}
 
@@ -59,7 +66,12 @@ public class ChatsSettings extends RecyclerViewController<Void> implements View.
   			@Override protected void setValuedSetting(ListItem item, SettingView view, boolean isUpdate) {
   				view.setDrawModifier(item.getDrawModifier());
   				switch(item.getId()) {
-  					// Coming soon...
+  					case R.id.btn_disableCamBtn:
+  						view.getToggler().setRadioEnabled(ChallegramXSettings.instance().isCamBtnDisabled(), isUpdate);
+  						break;
+  					case R.id.btn_disableRecBtn:
+  						view.getToggler().setRadioEnabled(ChallegramXSettings.instance().isRecBtnDisabled(), isUpdate);
+  						break;
   				}
   			}
   		};
@@ -67,7 +79,14 @@ public class ChatsSettings extends RecyclerViewController<Void> implements View.
   		// New ArrayList For Our RecyclerView
   		ArrayList<ListItem> items = new ArrayList<>();
 
-  		// Items will be added soon...
+  		items.add(new ListItem(ListItem.TYPE_EMPTY_OFFSET_SMALL));
+    	items.add(new ListItem(ListItem.TYPE_HEADER, 0, 0, R.string.ChatsSettings));
+
+    	items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));
+    	items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_disableCamBtn, 0, R.string.DisableCameraButton));
+    	items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
+    	items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_disableRecBtn, 0, R.string.DisableRecordButton));
+    	items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
 
   		adapter.setItems(items, true);
     	recyclerView.setAdapter(adapter);
