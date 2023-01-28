@@ -31,19 +31,19 @@ public class ChallegramXSettings {
 	private static final String KEY_VERSION = "version";
 
 	// Challegram X General Settings
-	public static final string HIDE_PHONE = "hide_phone";
-	public static final string SHOW_CHAT_ID = "show_chatid";
+	public static final String HIDE_PHONE = "hide_phone";
+	public static final String SHOW_CHAT_ID = "show_chatid";
 
 	// Challegram X Appearance Settings
-	public static final string DRAWER_CONTACTS = "drawer_contacts";
-	public static final string DRAWER_FAVOURITE = "drawer_favourite";
-	public static final string DRAWER_INVITE_FRIENDS = "drawer_invite_friends";
-	public static final string DRAWER_HELP = "drawer_help";
-	public static final string DRAWER_NIGHTMODE = "drawer_nightmode";
+	public static final String DRAWER_CONTACTS = "drawer_contacts";
+	public static final String DRAWER_FAVOURITE = "drawer_favourite";
+	public static final String DRAWER_INVITE_FRIENDS = "drawer_invite_friends";
+	public static final String DRAWER_HELP = "drawer_help";
+	public static final String DRAWER_NIGHTMODE = "drawer_nightmode";
 
 	// Challegram X Chats Settings
-	public static final string DISABLE_CAM_BTN = "disable_camera_button";
-	public static final string DISABLE_REC_BTN = "disable_record_button";
+	public static final String DISABLE_CAM_BTN = "disable_camera_button";
+	public static final String DISABLE_REC_BTN = "disable_record_button";
 
 	// Challegram X Other Settings
 	// -> Coming soon...

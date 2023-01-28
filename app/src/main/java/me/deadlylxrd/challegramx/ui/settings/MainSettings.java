@@ -27,7 +27,7 @@ import java.util.ArrayList;
 
 import me.deadlylxrd.challegramx.ChallegramXSettings;
 import me.deadlylxrd.challegramx.configs.Config;
-import me.deadlylxrd.challegram.utils.system.LifecycleUtils;
+import me.deadlylxrd.challegramx.utils.system.LifecycleUtils;
 
 public class MainSettings extends RecyclerViewController<Void> implements View.OnClickListener, ViewController.SettingsIntDelegate {
 
@@ -147,8 +147,9 @@ public class MainSettings extends RecyclerViewController<Void> implements View.O
     	items.add(new ListItem(ListItem.TYPE_SEPARATOR));
     	items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_telegramChat, R.drawable.baseline_forum_24, R.string.TelegramChat));
     	items.add(new ListItem(ListItem.TYPE_SEPARATOR));
+        items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
 
-    	items.add(new ListItem(ListItem.TYPE_HEADER, 0, 0, R.string.ChallegramXInfo))
+    	items.add(new ListItem(ListItem.TYPE_HEADER, 0, 0, R.string.ChallegramXInfo));
 
     	// Challegram X Dev Stuff
     	items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));
@@ -158,6 +159,8 @@ public class MainSettings extends RecyclerViewController<Void> implements View.O
     	items.add(new ListItem(ListItem.TYPE_SEPARATOR));
     	items.add(new ListItem(ListItem.TYPE_VALUED_SETTING_COMPACT, R.id.btn_donate, R.drawable.baseline_paid_24, R.string.Donate));
     	items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
+
+        items.add(new ListItem(ListItem.TYPE_HEADER, 0, 0, R.string.ChallegramXService));
 
     	// Reboot this shit?
     	items.add(new ListItem(ListItem.TYPE_SHADOW_TOP));

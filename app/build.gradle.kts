@@ -98,7 +98,7 @@ android {
         dimension = "abi"
         versionCode = (abi + 1)
         minSdk = variant.minSdkVersion
-        buildConfigBool("WEBP_ENABLED", variant.minSdkVersion < 19)
+        buildConfigBool("WEBP_ENABLED", variant.minSdkVersion < 22)
         buildConfigBool("SIDE_LOAD_ONLY", variant.sideLoadOnly)
         ndk.abiFilters.clear()
         ndk.abiFilters.addAll(variant.filters)
@@ -194,7 +194,7 @@ dependencies {
   implementation("com.google.android.gms:play-services-basement:18.1.0")
   implementation("com.google.android.gms:play-services-maps:18.1.0")
   implementation("com.google.android.gms:play-services-location:21.0.1")
-  implementation("com.google.android.gms:play-services-mlkit-barcode-scanning:18.1.0")
+  implementation("com.google.android.gms:play-services-mlkit-barcode-scanning:16.2.1")
   // Firebase: https://firebase.google.com/support/release-notes/android
   implementation("com.google.firebase:firebase-messaging:23.1.1") {
     exclude(group = "com.google.firebase", module = "firebase-core")

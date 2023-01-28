@@ -1,7 +1,3 @@
-<!-- This is a Challegram X resource file. -->
-<!-- Challegram X is not a trademark of Telegram and Telegram X. -->
-<!-- Challegram X is an open and freely distributed modification of Telegram X. -->
-
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
@@ -34,8 +30,10 @@
 	<string name="Donate">Donate</string>
 	<string name="DonateDesc">Support further development of Challegram X</string>
 
+	<string name="ChallegramXService">Service functions</string>
+
 	<string name="Reboot">Restart</string>
-	<string name="RebootDesc">Full restart of the application to apply some settings</string>
+	<string name="RebootDesc">Restart of the application to apply some settings</string>
 
 	<!-- Challegram X General Settings Strings -->
 	<string name="HidePhone">Hide Phone</string>

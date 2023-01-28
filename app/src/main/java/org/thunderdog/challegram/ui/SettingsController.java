@@ -84,7 +84,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import me.deadlylxrd.challegramx.ChallegramXSettings;
-import me.deadlylxrd.challegramx.ui.MainSettings;
+import me.deadlylxrd.challegramx.ui.settings.MainSettings;
 import me.deadlylxrd.challegramx.utils.Utils;
 
 import me.vkryl.android.widget.FrameLayoutFix;

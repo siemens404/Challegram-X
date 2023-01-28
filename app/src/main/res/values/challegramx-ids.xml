@@ -1,8 +1,4 @@
-<!-- This is a Challegram X resource file. -->
-<!-- Challegram X is not a trademark of Telegram and Telegram X. -->
-<!-- Challegram X is an open and freely distributed modification of Telegram X. -->
-
-<?xml version="1.0" encoding="utf-8"?>
+\<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
 	<!-- Challegram X -->
@@ -10,6 +6,7 @@
 	<item type="id" name="btn_chgxBuild" />
 
 	<!-- Challegram X Main Settings Ids -->
+        <item type="id" name="btn_ChallegramXSettings" />
 	<item type="id" name="btn_generalSettings" />
 	<item type="id" name="btn_appearanceSettings" />
 	<item type="id" name="btn_chatsSettings" />
@@ -36,6 +33,7 @@
 	<item type="id" name="btn_disableRecBtn" />
 
 	<!-- Challegram X Controller Ids -->
+	<item type="id" name="ChallegramXSettings" />
 	<item type="id" name="GeneralSettings" />
 	<item type="id" name="AppearanceSettings" />
 	<item type="id" name="ChatsSettings" />

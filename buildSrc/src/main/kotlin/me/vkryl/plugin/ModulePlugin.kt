@@ -104,7 +104,7 @@ open class ModulePlugin : Plugin<Project> {
     val androidExt = project.extensions.getByName("android")
     if (androidExt is BaseExtension) {
       androidExt.apply {
-        compileSdkVersion(versions.getOrThrow("version.sdk_compile").toInt())
+        compileSdkVersion(33)
         buildToolsVersion(versions.getOrThrow("version.build_tools"))
         ndkVersion = versions.getOrThrow("version.ndk")
         ndkPath = File(sdkDirectory, "ndk/$ndkVersion").absolutePath

@@ -11,7 +11,7 @@ import org.thunderdog.challegram.core.Lang;
 public class Utils {
 
 	// Get Challegram-X version
-	public static getChgxVersion() {
+	public static String getChgxVersion() {
 		String msg = Lang.getString(R.string.ChallegramXVersion, Config.CHALLEGRAMX_VERSION);
 		return msg;
 	}

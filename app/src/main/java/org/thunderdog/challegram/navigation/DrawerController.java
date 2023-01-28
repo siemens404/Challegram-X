@@ -261,7 +261,6 @@ public class DrawerController extends ViewController<Void> implements View.OnCli
 
     this.settingsErrorIcon = getSettingsErrorIcon();
     items.add(new ListItem(ListItem.TYPE_DRAWER_ITEM, R.id.btn_settings, R.drawable.baseline_settings_24, R.string.Settings));
-
     if (ChallegramXSettings.instance().isDrawerContactsShows()) {
       items.add(new ListItem(ListItem.TYPE_DRAWER_ITEM, R.id.btn_contacts, R.drawable.baseline_perm_contact_calendar_24, R.string.Contacts));
     }
@@ -271,36 +270,17 @@ public class DrawerController extends ViewController<Void> implements View.OnCli
     if (ChallegramXSettings.instance().isDrawerInvitesShows()) {
       items.add(new ListItem(ListItem.TYPE_DRAWER_ITEM, R.id.btn_invite, R.drawable.baseline_person_add_24, R.string.InviteFriends));
     }
-
     this.proxyAvailable = Settings.instance().getAvailableProxyCount() > 0;
     if (proxyAvailable) {
       proxyItem.setSelected(Settings.instance().getEffectiveProxyId() != Settings.PROXY_ID_NONE);
       items.add(proxyItem);
     }
-
     if (ChallegramXSettings.instance().isDrawerHelpShows()) {
       items.add(new ListItem(ListItem.TYPE_DRAWER_ITEM, R.id.btn_help, R.drawable.baseline_help_24, R.string.Help));
     }
     if (ChallegramXSettings.instance().isDrawerNightmodeShows()) {
       items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
       items.add(new ListItem(ListItem.TYPE_DRAWER_ITEM_WITH_RADIO, R.id.btn_night, R.drawable.baseline_brightness_2_24, R.string.NightMode, R.id.btn_night, Theme.isDark()));
-    }
-    
-    /* if (Test.NEED_CLICK) {
-      items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
-      items.add(new ListItem(ListItem.TYPE_DRAWER_ITEM, R.id.btn_reportBug, R.drawable.baseline_bug_report_24, Test.CLICK_NAME, false));
-    }
-    if (BuildConfig.EXPERIMENTAL) {
-      items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
-      items.add(new ListItem(ListItem.TYPE_DRAWER_ITEM, R.id.btn_featureToggles, R.drawable.outline_toggle_on_24, "Feature Toggles", false));
-    }
-    if (Settings.instance().inDeveloperMode()) {
-      items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
-      items.add(new ListItem(ListItem.TYPE_DRAWER_ITEM, R.id.btn_tdlib_clearLogs, R.drawable.baseline_bug_report_24, "Clear TDLib logs", false));
-      items.add(new ListItem(ListItem.TYPE_DRAWER_ITEM, R.id.btn_tdlib_shareLogs, R.drawable.baseline_bug_report_24, "Send TDLib log", false));
-        if (BuildConfig.DEBUG) {
-        items.add(new SettingItem(SettingItem.TYPE_DRAWER_ITEM, R.id.btn_submitCrash, R.drawable.baseline_bug_report_24, "Crash app", false));
-      } */
     }
 
     adapter = new SettingsAdapter(this) {

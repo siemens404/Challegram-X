@@ -1,7 +1,3 @@
-<!-- This is a Challegram X resource file. -->
-<!-- Challegram X is not a trademark of Telegram and Telegram X. -->
-<!-- Challegram X is an open and freely distributed modification of Telegram X. -->
-
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
@@ -21,7 +17,7 @@
 	<string name="ChallegramXLinks">Ссылки</string>
 
 	<string name="TelegramChannel">Канал Telegram</string>
-	<string name="TelegramChannelDesc">Получай свежие новости и обновления в нашем официальном канале!</string>
+	<string name="TelegramChannelDesc">Получай свежие обновления и новости о Challegram X!</string>
 	<string name="TelegramChat">Чат в Telegram</string>
 	<string name="TelegramChatDesc">Обсуждай Challegram X с остальными пользователями!</string>
 
@@ -33,9 +29,11 @@
 	<string name="SourceCodeDesc">Посмотреть исходный код Challegram X</string>
 	<string name="Donate">Финансовая поддержка</string>
 	<string name="DonateDesc">Закинуть копеечку на развитие Challegram X</string>
-
+	
+	<string name="ChallegramXService">Служебное</string>
+	
 	<string name="Reboot">Перезапуск</string>
-	<string name="RebootDesc">Полный перезапуск приложения для применения некоторых настроек</string>
+	<string name="RebootDesc">Перезапуск приложения для применения настроек</string>
 
 	<!-- Challegram X General Settings Strings -->
 	<string name="HidePhone">Скрыть номер телефона</string>

@@ -44,11 +44,11 @@ public class ChatsSettings extends RecyclerViewController<Void> implements View.
 		switch(id) {
 			case R.id.btn_disableCamBtn:
 				ChallegramXSettings.instance().toggleDisableCamBtn();
-				adapter.updateVauledSettingById(R.id.btn_disableCamBtn);
+				adapter.updateValuedSettingById(R.id.btn_disableCamBtn);
 				break;
 			case R.id.btn_disableRecBtn:
 				ChallegramXSettings.instance().toggleDisableRecBtn();
-				adapter.updateVauledSettingById(R.id.btn_disableRecBtn);
+				adapter.updateValuedSettingById(R.id.btn_disableRecBtn);
 				break;
 		}
 	}
