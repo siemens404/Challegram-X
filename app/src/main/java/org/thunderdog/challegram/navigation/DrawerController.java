@@ -760,7 +760,7 @@ public class DrawerController extends ViewController<Void> implements View.OnCli
       adapter.getItems().addAll(1, items);
       adapter.notifyItemRangeInserted(1, items.size());
     } else {
-      int count = adapter.indexOfViewById(R.id.btn_contacts) - 1;
+      int count = adapter.indexOfViewById(R.id.btn_settings) - 1;
       adapter.removeRange(1, count);
     }
   }
