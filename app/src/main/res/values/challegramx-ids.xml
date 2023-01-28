@@ -31,6 +31,7 @@
 	<!-- Challegram X Chats Settings Ids -->
 	<item type="id" name="btn_disableCamBtn" />
 	<item type="id" name="btn_disableRecBtn" />
+        <item type="id" name="btn_disableStickerTimestamp" />
 
 	<!-- Challegram X Controller Ids -->
 	<item type="id" name="ChallegramXSettings" />

@@ -48,5 +48,6 @@
 	<!-- Challegram X Chats Settings Strings -->
 	<string name="DisableCameraButton">Отключить кнопку камеры</string>
 	<string name="DisableRecordButton">Отключить кнопку записи</string>
+        <string name="DisableStickerTimestamp">Отключить время на стикерах</string>
 
 </resources>

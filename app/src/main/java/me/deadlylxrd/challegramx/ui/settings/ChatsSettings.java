@@ -50,6 +50,10 @@ public class ChatsSettings extends RecyclerViewController<Void> implements View.
 				ChallegramXSettings.instance().toggleDisableRecBtn();
 				adapter.updateValuedSettingById(R.id.btn_disableRecBtn);
 				break;
+			case R.id.btn_disableStickerTimestamp:
+				ChallegramXSettings.instance().toggleDisableStickerTimestamp();
+				adapter.updateValuedSettingById(R.id.btn_disableStickerTimestamp);
+				break;
 		}
 	}
 
@@ -72,6 +76,9 @@ public class ChatsSettings extends RecyclerViewController<Void> implements View.
   					case R.id.btn_disableRecBtn:
   						view.getToggler().setRadioEnabled(ChallegramXSettings.instance().isRecBtnDisabled(), isUpdate);
   						break;
+					case R.id.btn_disableStickerTimestamp:
+						view.getToggler().setRadioEnabled(ChallegramXSettings.instance().isStickerTimestampDisabled(), isUpdate);
+						break;
   				}
   			}
   		};
@@ -86,6 +93,8 @@ public class ChatsSettings extends RecyclerViewController<Void> implements View.
     	items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_disableCamBtn, 0, R.string.DisableCameraButton));
     	items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
     	items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_disableRecBtn, 0, R.string.DisableRecordButton));
+	items.add(new ListItem(ListItem.TYPE_SEPARATOR_FULL));
+	items.add(new ListItem(ListItem.TYPE_RADIO_SETTING, R.id.btn_disableStickerTimestamp, 0, R.string.DisableStickerTimestamp));
     	items.add(new ListItem(ListItem.TYPE_SHADOW_BOTTOM));
 
   		adapter.setItems(items, true);

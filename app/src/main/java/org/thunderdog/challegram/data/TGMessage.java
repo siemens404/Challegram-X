@@ -124,6 +124,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import me.deadlylxrd.challegramx.ChallegramXSettings;
+
 import me.vkryl.android.AnimatorUtils;
 import me.vkryl.android.SdkVersion;
 import me.vkryl.android.animator.BoolAnimator;
@@ -3544,6 +3546,9 @@ public abstract class TGMessage implements InvalidateContentProvider, TdlibDeleg
     final boolean isSending = isSending();
     final boolean isFailed = isFailed();
 
+    final boolean isMsgSticker = msg.content.getConstructor() == TdApi.MessageSticker.CONSTRUCTOR;
+    final boolean isStickerTimestampDisabled = ChallegramXSettings.instance().isStickerTimestampDisabled();
+
     boolean reverseOrder;
 
     if ((reverseOrder = Config.MOVE_BUBBLE_TIME_RTL_TO_LEFT && moveBubbleTimePartToLeft())) {
@@ -3556,7 +3561,7 @@ public abstract class TGMessage implements InvalidateContentProvider, TdlibDeleg
       startY -= commentButton.getAnimatedHeight(0, commentButton.getVisibility());
     }
 
-    if (backgroundColor != 0) {
+    if (backgroundColor != 0 && !(isMsgSticker && isStickerTimestampDisabled)) {
       startY -= Screen.dp(4f);
       RectF rectF = Paints.getRectF();
       int padding = Screen.dp(6f);
@@ -3606,7 +3611,7 @@ public abstract class TGMessage implements InvalidateContentProvider, TdlibDeleg
       startX += Icons.getEditedIconWidth() + Screen.dp(2f);
     }
 
-    if (time != null) {
+    if (time != null && !(isMsgSticker && isStickerTimestampDisabled)) {
       c.drawText(time, startX, startY + Screen.dp(15.5f), Paints.colorPaint(mTimeBubble(), textColor));
       startX += pTimeWidth;
     }
@@ -3627,7 +3632,7 @@ public abstract class TGMessage implements InvalidateContentProvider, TdlibDeleg
         // TODO failure icon
       } else if (isSending) {
         Drawables.draw(c, Icons.getClockIcon(iconColorId), startX - Screen.dp(Icons.CLOCK_SHIFT_X), top - Screen.dp(Icons.CLOCK_SHIFT_Y), iconPaint);
-      } else {
+      } else if (!(isMsgSticker && isStickerTimestampDisabled)) {
         boolean unread = isUnread() && !noUnread();
         Drawables.draw(c, unread ? Icons.getSingleTick(iconColorId) : Icons.getDoubleTick(iconColorId), startX - Screen.dp(Icons.TICKS_SHIFT_X), top - Screen.dp(Icons.TICKS_SHIFT_Y), unread ? ticksPaint : ticksReadPaint);
       }

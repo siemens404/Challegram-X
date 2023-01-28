@@ -44,6 +44,7 @@ public class ChallegramXSettings {
 	// Challegram X Chats Settings
 	public static final String DISABLE_CAM_BTN = "disable_camera_button";
 	public static final String DISABLE_REC_BTN = "disable_record_button";
+        public static final String DISABLE_STICKER_TIMESTAMP = "disable_sticker_timestamp";
 
 	// Challegram X Other Settings
 	// -> Coming soon...
@@ -248,5 +249,13 @@ public class ChallegramXSettings {
 	public void toggleDisableRecBtn() {
   		putBoolean(DISABLE_REC_BTN, !isRecBtnDisabled());
   	}
+
+	public boolean isStickerTimestampDisabled() {
+		return getBoolean(DISABLE_STICKER_TIMESTAMP, false);
+	}
+
+	public void toggleDisableStickerTimestamp() {
+		putBoolean(DISABLE_STICKER_TIMESTAMP, !isStickerTimestampDisabled());
+	}
 
 }
